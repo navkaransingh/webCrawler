@@ -48,7 +48,7 @@ public class DocumentDownloader implements IDownloader {
 	        Connection.Response html  = document.getHtmlPage();
 	        final org.jsoup.nodes.Document doc = html.parse();
 
-	        final File f = new File("filename.html");
+	        final File f = new File(pair.getKey().toString()+".html");
 	        FileUtils.writeStringToFile(f, doc.outerHtml(), "UTF-8");
 	    }
 		
